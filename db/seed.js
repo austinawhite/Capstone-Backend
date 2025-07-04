@@ -17,7 +17,20 @@ await createCities({city_name: "Miami", city_description: "Miami, Florida, is a 
 await createCities({city_name: "Las Vegas", city_description: "Las Vegas is a world-renowned resort city in Nevada, famous for its vibrant entertainment, including gambling, nightlife, shopping, and fine dining. It's often called the Entertainment Capital of the World and is a major tourist destination. While the famous Las Vegas Strip is technically outside the city limits, it's the area most associated with the city's identity. ", city_image: "https://www.thoughtco.com/thmb/3Olgaxc1_19PzJwB_TorJCHMOMI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-535829219-59c5999868e1a20014d27346.jpg"})
 
 
+// seed experiences - New York 
 
+await createExperiences({experienceName:" ", experience_description:" ", experience_picture:" ", experience_city:" " })
+
+await createExperiences({experienceName:" ", experience_description:" ", experience_picture:" ", experience_city:" " })
+
+
+// seed cities - LA 
+
+
+// seed cities - Miami 
+
+
+// seed cities - Vegas 
 
 
 
