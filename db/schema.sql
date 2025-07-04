@@ -19,7 +19,7 @@ CREATE TABLE cities (
     city_image TEXT NOT NULL
 );
 
-CREATE TABLE experience_cateogry (
+CREATE TABLE experience_category (
     id SERIAL PRIMARY KEY,
     category_name TEXT UNIQUE NOT NULL
 );
@@ -30,9 +30,9 @@ CREATE TABLE experiences (
     experience_description TEXT NOT NULL,
     experience_picture TEXT NOT NULL, 
     experience_city INTEGER NOT NULL,
-    experience_cateogry INTEGER NOT NULL,
+    experience_category INTEGER NOT NULL,
     FOREIGN KEY (experience_city) REFERENCES cities(id) ON DELETE CASCADE
-    FOREIGN key (experience_cateogry) REFERENCES experience_cateogry(category_name) ON DELETE CASCADE 
+    FOREIGN key (experience_category) REFERENCES experience_category(category_name) ON DELETE CASCADE 
 );
 
 CREATE TABLE trips(
