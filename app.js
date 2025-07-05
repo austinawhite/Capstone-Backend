@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 export default app;
 import cors from "cors";
-import citiesRouter from "./api/citites.js";
+import citiesRouter from "./api/cities.js";
 
 
 app.use(cors());
