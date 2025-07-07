@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS cities CASCADE;
-DROP TABLE IF EXISTS experience_cateogry CASCADE;
+DROP TABLE IF EXISTS experience_category CASCADE;
 DROP TABLE IF EXISTS experiences CASCADE;
 DROP TABLE IF EXISTS trips CASCADE;
 DROP TABLE IF EXISTS reviews CASCADE;
@@ -32,7 +32,7 @@ CREATE TABLE experiences (
     experience_city INTEGER NOT NULL,
     experience_category INTEGER NOT NULL,
     FOREIGN KEY (experience_city) REFERENCES cities(id) ON DELETE CASCADE,
-    FOREIGN KEY (experience_category) REFERENCES experience_category(category_name) ON DELETE CASCADE 
+    FOREIGN KEY (experience_category) REFERENCES experience_category(id) ON DELETE CASCADE 
 );
 
 CREATE TABLE trips(
