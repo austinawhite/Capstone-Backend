@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 export default router;
-import { getCities, getCity } from "../db/queries/cities";
+import { getCities, getCity } from "../db/queries/cities.js";
 
 // GET all Cities
 router.route("/").get(async(req, res)=>{
