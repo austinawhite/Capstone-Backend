@@ -12,8 +12,22 @@ export async function createCategory({category_name}) {
     
 }
 
-
 //get all categories 
+
+export async function getCategories(){
+    const sql = `
+    SELECT * FROM experience_category;
+    `;
+    const {rows: categories} = await db.query(sql)
+    return categories;
+}
 
 
 //get category by ID 
+
+export async function getCategory(id){
+    const sql = `
+    SELECT * FROM experience_category WHERE id = $1;`
+    const {rows:category} = await db.query(sql, [id])
+    return category[0];
+}
