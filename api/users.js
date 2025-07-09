@@ -1,113 +1,61 @@
 import express from "express";
 const router = express.Router();
 export default router;
+import db from "#db/client";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { getUserById, getUserInfo, loginUser, createUser } from "../db/queries/users.js";
+import { createUser, getUsers, getUserById, getUserInfo } from "../db/queries/users.js";
+import { verifyToken } from "../middleware.js";
 
-
-
-// verifyToken
-export const verifyToken = (req, res, next)=>{
-    if(!req.headers[`authorization`]){return res.status(401).send(`No token provided`)};
-    const authHeader = req.headers[`authorization`];
-    const token = authHeader.split(' ')[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
-    next();
-};
-
-//Get /users/getInfo
-router.route("/login/getInfo/:id").get(async(req, res)=>{
-    const email = req.params.id;
-
-    try{
-        const userInfo = await getUserInfo({email});
-
-        res.status(201).json(userInfo);
-    
-
-    }catch(err){
-        console.log(err);
-        res.json(`Unable to get User Info.`)
-    }
+router.route("/").get(async (req, res) => {
+    const users = await getUsers();
+    res.send(users);
 });
 
 
-
-//GET /users/register
-router.route("/register").post(async(req, res)=> {
-    const email = req.params.id;
-
-    try{
-        const userInfo = await getUserInfo({email});
-        res.status(201).json(userInfo);
-    }catch(err){
-        console.log(err);
-        res.json(`Unable to get User Info.`)
-    }
+router.post('/register', async (req, res) => {
+  const {email, password} = req.body;
+  if (!email || !password) {
+    return res.status(400).send(`Missing email address or password`);
+  }
+  try{
+    const hashedPassword = await bcrypt.hash(password, 5)
+    const result = await db.query(`INSERT INTO users (email, password)
+      VALUES ($1, $2) RETURNING *;`, [email, hashedPassword]);
+      const newUser = result.rows[0]
+      if(!newUser) return res.status(401).send(`Can not create a new user`);
+      const token = jwt.sign({id: newUser.id, email: newUser.email}, process.env.JWT_SECRET);
+      res.status(201).json(token)
+  }catch(error){
+    console.log(error)
+    res.send('Error registering')
+  }
 })
 
-// POST /users/register
-router.route("/register").post(async(req, res)=>{
-    const {email, password} = req.body;
-    try{
-        const hashedpassword = await bcrypt.hash(password, 5);
-        const newUser = await createUser({email, password:hashedpassword});
+router.post('/login', async(req,res,next) => {
+  const {email, password} = req.body;
+  if (!email || !password) {
+    return res.status(400).json(`Missing email or password`);
+  }
 
-        if (!newUser){
-            return res.status(400).json(`New user could not be registered.`)
-        };
-        
-        const token = jwt.sign({id: newUser.id, email: newUser.email}, process.env.JWT_SECRET);
+  try {
+    const result = await db.query(`SELECT * FROM users WHERE email = $1;`, [email]); 
+    const realUserInfo = result.rows[0]
 
-        res.status(201).json(token);
+    const isPWMatch = await bcrypt.compare(password, realUserInfo.password);
+    if(!isPWMatch) return res.status(401).json('Not authorized');
 
-    }catch(err){
-        console.log(err);
-        res.json(`There was an error registering the user.`)
-    }
-});
+    const token = jwt.sign({id: realUserInfo.id, email: realUserInfo.email},process.env.JWT_SECRET);
+    res.status(200).json( {success:  true ,token});
 
-// POST /users/login
-router.route("/login").post(async(req, res)=>{
-    const {email, password} = req.body;
+  }catch(error){
+    console.log('Could not log in',error)
+    res.status(500).json({success: false, message: 'Login failed'});
+  }
+})
 
-    try{
-        const userInfo = await loginUser({email});
+router.route("/user").get(verifyToken, async(req,res)=>{
+const user = await getUserById(req.user.id)
+res.status(200).send(user)
 
-        const passwordMatch = await bcrypt.compare(password, userInfo.password);
-
-        if (!passwordMatch){
-            return res.status(401).json(`Not authorized.`)
-        };
-
-    }catch(err){
-        console.log(err);
-        res.json(`Unable to login.`)
-    }
-});
-
-// /GET /users/me
-router.route("/:id").get(verifyToken, async(req, res)=>{
-
-    if (!verifyToken){
-        return res.status(403).send(`Please log in to access the account!`)
-    };
-
-    const id = req.params.id;
-
-    if(isNaN(id) || id < 0){
-        return res.status(400).json(`Please use a valid number for the ID.`)
-    };
-
-    const user = await getUserById(id);
-
-    if (!user){
-        return res.status(404).json(`User not found.`)
-    };
-
-    res.send(user[0]);
-});
-
-
+})
