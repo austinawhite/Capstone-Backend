@@ -14,11 +14,17 @@ router.route("/").get(async(req,res)=>{
 
 router.route("/:city").get(async(req, res)=>{
     const experience_city = req.params.city;
+    const category = req.query.category;
+
+        console.log("City ID:", experience_city);
+        console.log("Category:", category);
 
        if(isNaN(experience_city) || experience_city < 0){
             return res.status(400).send(`Please use a valid city id.`);}
     
-        const experiences = await getExperiencesByCity(parseInt(experience_city));
+        const experiences = await getExperiencesByCityCat(parseInt(experience_city), parseInt(category));
+
+        console.log("Found experiences:", experiences);
     
         if(!experiences || experiences.length ===0){
             return res.status(404).json(`No experiences found for this city`)
