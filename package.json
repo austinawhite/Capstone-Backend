@@ -1,8 +1,11 @@
 {
   "name": "capstone-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "middleware.js",
   "type": "module",
+  "imports": {
+    "#*": "./*.js"
+     },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch --env-file=.env server.js",
