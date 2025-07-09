@@ -40,8 +40,20 @@ CREATE TABLE trips(
     trip_date DATE NOT NULL,
     end_date DATE NOT NULL,
     user_id INTEGER NOT NULL, 
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    trip_city INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (trip_city) REFERENCES cities(id) ON DELETE CASCADE
 ); 
+
+/* This is for the specific experiences selected for a person's trip */
+CREATE TABLE trip_experiences(
+    id SERIAL PRIMARY KEY, 
+    trip_id INTEGER NOT NULL,
+    trip_experience INTEGER NOT NULL, 
+    experience_date DATE NOT NULL,
+    FOREIN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE,
+    FOREIGN KEY (trip_experience) REFERENCES experiences(id) ON DELETE CASCADE
+);
 
 CREATE TABLE reviews(
     id SERIAL PRIMARY KEY,
