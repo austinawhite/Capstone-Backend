@@ -17,6 +17,24 @@ export const verifyToken = (req, res, next)=>{
     next();
 };
 
+//Get /users/getInfo
+router.route("/login/getInfo/:id").get(async(req, res)=>{
+    const email = req.params.id;
+
+    try{
+        const userInfo = await getUserInfo({email});
+
+        res.status(201).json(userInfo);
+    
+
+    }catch(err){
+        console.log(err);
+        res.json(`Unable to get User Info.`)
+    }
+});
+
+
+
 //GET /users/register
 router.route("/register").post(async(req, res)=> {
     const email = req.params.id;
