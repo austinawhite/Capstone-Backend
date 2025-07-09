@@ -3,7 +3,7 @@ const router = express.Router();
 export default router;
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { getUserById, getUserInfo, loginUser, createUser } from "../db/queries/users";
+import { getUserById, getUserInfo, loginUser, createUser } from "../db/queries/users.js";
 
 
 
