@@ -3,6 +3,7 @@ import db from "./client.js";
 import { createCity } from "./queries/cities.js";
 import { createCategory } from "./queries/categories.js";
 import { createExperiences } from "./queries/experiences.js";
+import { createUser } from './queries/users.js';
 await db.connect();
 await seed();
 await db.end();
@@ -11,6 +12,11 @@ console.log("🌱 Database seeded.");
 
 
 async function seed(){
+   
+//seed Users
+await createUser({email: "MisterUser@gmail.com", password: "pleaseletmepass"})
+await createUser({email: "Tourist1@gmail.com", password: "password"})
+
 
 
 // seed cities
