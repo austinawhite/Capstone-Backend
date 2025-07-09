@@ -4,6 +4,7 @@ import cors from "cors";
 import citiesRouter from "./api/cities.js";
 import categoriesRouter from "./api/categories.js";
 import experiencesRouter from "./api/experiences.js";
+import usersRouter from "./api/users.js";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use("/cities", citiesRouter);
 app.use("/categories", categoriesRouter);
 app.use("/experiences", experiencesRouter);
+app.use("/users", usersRouter);
 
 app.use((err, req, res, next)=>{
     console.error(err);
