@@ -29,7 +29,7 @@ export async function addExperienceToTrip ({trip_id, trip_experience, experience
     VALUES ($1, $2, $3)
     RETURNING *`; 
 
-    const {rows} = await db.query(sql, [trip_id, experience_id, experience_date]);
+    const {rows} = await db.query(sql, [trip_id, trip_experience, experience_date]);
     return rows[0];
 }
 
