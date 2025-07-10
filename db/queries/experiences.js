@@ -20,6 +20,15 @@ export async function getExperiences(){
     return experiences;
 }
 
+// get experience by id 
+export async function getExperiencesById(id){
+    const sql = `
+    SELECT * FROM experiences WHERE id = $1`;
+
+    const {rows: experiences} = await db.query(sql, [id])
+    return experiences;
+}
+
 
 // get experiences for a city, this will display the experiences within a specific category for the city 
 export async function getExperiencesByCity(experience_city){
