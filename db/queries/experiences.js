@@ -26,7 +26,7 @@ export async function getExperiencesById(id){
     SELECT * FROM experiences WHERE id = $1`;
 
     const {rows: experiences} = await db.query(sql, [id])
-    return experiences;
+    return experiences[0];
 }
 
 
