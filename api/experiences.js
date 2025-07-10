@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 export default router;
-import { getExperiences, getExperiencesByCityCat, getExperiencesByCity } from "../db/queries/experiences.js";
+import { getExperiences, getExperiencesByCityCat, getExperiencesByCity, getExperiencesById } from "../db/queries/experiences.js";
 
 // GET all experiences 
 
@@ -56,4 +56,34 @@ router.route("/:city/:category").get(async(req, res)=>{
     }
 
     res.send(experiences);
+});
+
+//get experience by an id 
+
+router.route("/experiences/:id").get(async(req, res)=>{
+
+    try {
+    const id = req.params.id;
+
+        console.log("Experience ID:", id);
+
+       if(id < 0){
+            return res.status(400).send(`Please use a valid city id.`);}
+    
+        const experiences = await getExperiencesById(parseInt(id));
+
+        console.log("Found experience:", experiences);
+    
+        if(!experiences || experiences.length ===0){
+            return res.status(404).json(`Experience not found`)
+        };
+    
+        res.send(experiences);
+
+
+     } catch (error) {
+        console.error("Error in /experiences/:id route:", error);
+        res.status(500).json({ error });
+    }
+
 });
