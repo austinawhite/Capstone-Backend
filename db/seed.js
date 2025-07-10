@@ -75,7 +75,40 @@ await createExperiences({experience_name:"Comedy Cellar", experience_description
 await createExperiences({experience_name:"Lincoln Center", experience_description:"This world-renowned complex hosts everything from ballet to jazz, opera to film. Its iconic fountains and grand architecture make it as stunning outside as the performances are inside.", experience_picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV6d4g_CeLBvti5-Mr_2xhfd3xfwEJpfhDKg&s", experience_city:"1",experience_category:"4"})
 
 
-// seed cities - LA 
+
+// seed experiences - LA- Eat (category 1)
+
+await createExperiences({experience_name:"Perch ", experience_description:"Glamorous rooftop setting with French small plates, handcrafted cocktails & grand views of the city. ", experience_picture:"https://lh3.googleusercontent.com/p/AF1QipOJgg8xaY2kZEijEGYGCRnSFYGjpD2IQjXzubD7=s1360-w1360-h1020-rw", experience_city:"2", experience_category:"1"})
+
+await createExperiences({experience_name:"Bottega Louie ", experience_description:"Pizzas, pastas & small plates in a bright, bustling space, plus weekend brunch & macarons to-go. ", experience_picture:"https://lh3.googleusercontent.com/p/AF1QipOm7AXEylldsIfJtyBrn4JfdwzKraA0x1tlibSO=s1360-w1360-h1020-rw", experience_city:"2", experience_category:"1"})
+
+await createExperiences({experience_name:"The Little Door ", experience_description:"French Mediterranean restaurant since 1996 serving rustic meals, farm-to-table cocktails & wines.", experience_picture:"https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrJCIHJXYeyOIdcUFM7xXOKM-XA9-pke5xNtwI33fl1HZteSF_ZMrO1IVUqUSfaKZLuT2Xsi5lI9-lYcMSdlERdudoYQ_fiyJW1wErR1zRYQ_00VPfj-Jv3LuqqbVCHRv19VqSESg=s1360-w1360-h1020-rw", experience_city:"2", experience_category:"1"})
+
+
+// seed experiences - LA - Drinks (category 2)
+
+await createExperiences({experience_name:"Thunderbolt", experience_description:"They're known for their innovative cocktails and delicious Southern-inspired food menu. Their cocktail program utilizes technology and innovation for efficiency and flavor. ", experience_picture:"https://res.cloudinary.com/the-infatuation/image/upload/v1657764266/cms/guides/where-to-eat-drinking-when-youre-feeling-hot/Krystal_Thompson_LA_Bar_Updates_Bar_Flores-1.jpg", experience_city:"2", experience_category:"2"})
+
+await createExperiences({experience_name:"Spring St Bar ", experience_description:"Spring Street Bar is a popular spot located in the historic core of Downtown Los Angeles at 626 S Spring St B, Los Angeles, CA 90014. It's known for its blend of classic cocktails, craft beers, and gourmet sandwiches in an industrial-chic setting with a dog-friendly patio. ", experience_picture:"https://static.wixstatic.com/media/057c85_13f76d3837964ac6ac1aaf67f3317ca3~mv2.jpg/v1/fill/w_640,h_426,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/057c85_13f76d3837964ac6ac1aaf67f3317ca3~mv2.jpg", experience_city:"2", experience_category:"2"})
+
+await createExperiences({experience_name:"Flamingo Bar ", experience_description:"Known for beer, wine, and cocktails in a trendy hangout with an '80s vibe and Instagrammable decor. They are open every day from 4 PM to 2 AM, and are known for book clubs. They have food, great drinks, and a photo booth. ", experience_picture:"https://gastronomicslc.com/wp-content/uploads/2024/04/Flanker-Tipsy-Flamingo-room-Gastronomic-SLC.jpg", experience_city:"2", experience_category:"2"})
+
+// seed experiences - LA - Play (category 3)
+
+await createExperiences({experience_name:"Universal Studios Hollywood ", experience_description:"Universal Studios Hollywood is a renowned theme park and film studio located in Universal City, California, near Los Angeles. It's celebrated for its immersive entertainment experiences, featuring thrilling rides, entertaining shows, a world-famous studio tour, and various themed lands. The park has a cinema theme, reflecting its deep connection to the Hollywood film industry. ", experience_picture:"https://cdn2.nbcuni.com/NBCUniversal/styles/newsroom_stories_16_9_image_style/s3/2023-08/Universal-Studio-Homepage.png?VersionId=xHPemJHZWrirMKmbW2OytQvreV35oy0p&itok=3gnKluzC", experience_city:"2", experience_category:"3"})
+
+await createExperiences({experience_name:"Santa Monica Pier ", experience_description:"The Santa Monica Pier is a historic landmark located at the end of Colorado Avenue in Santa Monica, California. It is a popular destination featuring a variety of attractions, dining options, and stunning ocean views. ", experience_picture:"https://www.hellomondo.com/wp-content/uploads/santa-monica-pier.jpg", experience_city:"2", experience_category:"3"})
+
+await createExperiences({experience_name:"Hollywood Walk of Fame ", experience_description:"The Hollywood Walk of Fame is a renowned landmark in Los Angeles, California, known for its embedded stars honoring celebrities in the entertainment industry. Located on Hollywood Boulevard, it offers a glimpse into Hollywood's history and iconic figures. ", experience_picture:"https://variety.com/wp-content/uploads/2020/09/hollywood-walk-of-fame.jpg", experience_city:"2", experience_category:"3"})
+
+
+// seed experiences - LA- Explore (category 4)
+
+await createExperiences({experience_name:"Griffith Observatory ", experience_description:"Griffith Observatory is an observatory in Los Angeles, California, on the south-facing slope of Mount Hollywood in Griffith Park. It commands a view of the Los Angeles Basin including Downtown Los Angeles to the southeast, Hollywood to the south, and the Pacific Ocean to the southwest. ", experience_picture:"https://lh3.googleusercontent.com/gps-cs-s/AC9h4nob5jLbiJaX_A2D9HFyyT_EUGzJaVpjWvPVUJh2DpT37pR8TgVqhdyZCF-quvX04W8VK3JVZtEpeiTUlB8YHmH4GASvcVOm9alBcX5tT_HdBztyovNjmRqHpefj0oMgAfL1yG5L=s1360-w1360-h1020-rw", experience_city:"2", experience_category:"4"})
+
+await createExperiences({experience_name:"La Brea Tar Pits", experience_description:"La Brea Tar Pits comprise an active paleontological research site in urban Los Angeles. Hancock Park was formed around a group of tar pits where natural asphalt has seeped up from the ground for tens of thousands of years. Over many centuries, the bones of trapped animals have been preserved", experience_picture:"https://nhm.org/sites/default/files/styles/fwc_full_small/public/2019-08/nhm_la_1104.jpg?h=2aebd59a ", experience_city:"2", experience_category:"4"})
+
+await createExperiences({experience_name:"Hollywood Bowl", experience_description:"The Hollywood Bowl is an iconic outdoor amphitheater located in the Hollywood Hills of Los Angeles, California. It is renowned for hosting a wide variety of musical events, including classical, jazz, pop, rock, and more.", experience_picture:"https://images.squarespace-cdn.com/content/v1/54b5af9ce4b0ad6fb5d06c8a/1438106778525-JFA5SJMRU2X9IQCPN5H8/image-asset.jpeg?format=1500w", experience_city:"2", experience_category:"4"})
 
 
 // seed cities - Miami 
