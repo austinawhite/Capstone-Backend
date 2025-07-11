@@ -27,7 +27,7 @@ export async function createTrip ({user_id, trip_city, trip_date, end_date, }) {
         VALUES ($1, $2, $3, $4)
         RETURNING *;`,
         [user_id, trip_city, trip_date, end_date]);
-        return trip;
+        return trips;
 }
 
 
