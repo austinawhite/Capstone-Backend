@@ -111,13 +111,70 @@ await createExperiences({experience_name:"La Brea Tar Pits", experience_descript
 await createExperiences({experience_name:"Hollywood Bowl", experience_description:"The Hollywood Bowl is an iconic outdoor amphitheater located in the Hollywood Hills of Los Angeles, California. It is renowned for hosting a wide variety of musical events, including classical, jazz, pop, rock, and more.", experience_picture:"https://images.squarespace-cdn.com/content/v1/54b5af9ce4b0ad6fb5d06c8a/1438106778525-JFA5SJMRU2X9IQCPN5H8/image-asset.jpeg?format=1500w", experience_city:"2", experience_category:"4"})
 
 
-// seed cities - Miami 
+// seed experiences - Miami - Eat (category 1) 
+
+await createExperiences({experience_name:"Joe’s Stone Crab", experience_description:"Since 1913, Joe’s has been an institution for fresh stone crabs and seafood classics in a lively, old-school dining room. This iconic spot embodies Miami Beach’s history and flavor.", experience_picture:"https://blog.resy.com/wp-content/uploads/2023/05/joesroom.jpeg ", experience_city:"3", experience_category:"1"})
+
+await createExperiences({experience_name:"Versailles Restaurant", experience_description:"Known as the world’s most famous Cuban restaurant, Versailles serves classic dishes like ropa vieja in a bright, bustling dining hall. It’s a cultural landmark in Little Havana.", experience_picture:"https://www.orlandosentinel.com/wp-content/uploads/migration/2021/11/11/2W2DFZTQUWW2D4G7274FFXEADY.jpg?w=1600&resize=1600,900  ", experience_city:"3", experience_category:"1"})
+
+await createExperiences({experience_name:"Mandolin Aegean Bistro", experience_description:"Tucked into a charming 1940s bungalow, Mandolin transports guests to the Greek isles with its fresh seafood and vibrant mezze plates. Its cozy garden patio is perfect for a leisurely meal.", experience_picture:"https://images.getbento.com/accounts/46c3628b83ff859c5f0fcb6aad5825ea/media/images/48793_DSC6619.png?w=1200&fit=crop&auto=compress,format&cs=origin&h=600  ", experience_city:"3", experience_category:"1"})
+
+// seed experiences - Miami - Drinks (category 2) 
+
+await createExperiences({experience_name:"Sugar at EAST Miami", experience_description:"Perched 40 stories above Brickell, Sugar offers Asian-inspired cocktails and tapas with breathtaking 360-degree views. It’s a chic, tropical rooftop escape for sunset happy hours.", experience_picture:"https://media.cntraveler.com/photos/5a8dcf2c873a2240b39fff03/master/pass/Sugar_3.jpg ", experience_city:"3", experience_category:"2"})
+
+await createExperiences({experience_name:"Bodega Taqueria y Tequila", experience_description:"By day, it’s a funky taco joint; by night, a hidden speakeasy bar serving tequila cocktails and live DJ sets. Bodega’s playful vibe makes it a favorite for late-night happy hour.", experience_picture:"https://images.getbento.com/accounts/33df34d609a7630609ad327639457292/media/images/92072MS_075_v2_1800_x_1200.jpg?w=1800&fit=max&auto=compress,format&cs=origin&h=1800 ", experience_city:"3", experience_category:"2"})
+
+await createExperiences({experience_name:"The Broken Shaker", experience_description:"Located in a lush backyard at the Freehand Hotel, The Broken Shaker crafts innovative cocktails with fresh, local ingredients. It’s a laid-back oasis perfect for relaxing after the beach.", experience_picture:"https://media.cntraveler.com/photos/5a8dc9aa0e2cf839e9dbf872/master/pass/Broken-Shaker_2018_Freehand-Broken-Shaker-patio-2-Adrian-Gaut.jpg  ", experience_city:"3", experience_category:"2"})
+
+// seed experiences - Miami - Play (category 3) 
+
+await createExperiences({experience_name:"LIV Nightclub", experience_description:"Experience Miami’s legendary nightlife at LIV, an opulent club known for celebrity DJs, high-energy dance floors, and extravagant bottle service. Located inside the iconic Fontainebleau.", experience_picture:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/12/96/60/liv.jpg?w=1200&h=-1&s=1 ", experience_city:"3", experience_category:"3"})
+
+await createExperiences({experience_name:"New World Symphony Wallcast", experience_description:"Enjoy free outdoor concerts projected live on a giant wall at SoundScape Park, blending classical music with a modern experience. It’s perfect for a cultural night under the stars.", experience_picture:"https://www.nws.edu/media/202987/_inline-wide-wallcast-new.jpg ", experience_city:"3", experience_category:"3"})
+
+await createExperiences({experience_name:"Magic City Casino", experience_description:"Beyond gaming, this Miami staple hosts comedy shows, concerts, and special events year-round. It’s a vibrant destination for entertainment and nightlife.", experience_picture:" https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/de/39/f2/magic-city-casino.jpg?w=1200&h=-1&s=1 ", experience_city:"3", experience_category:"3"})
+
+// seed experiences - Miami - Explore (category 4) 
+
+await createExperiences({experience_name:"Wynwood Walls", experience_description:"A dynamic outdoor museum featuring ever-changing, large-scale murals from world-renowned street artists. This vibrant district is a must-see for art lovers and Instagrammers alike.", experience_picture:"https://thewynwoodwalls.com/wp-content/uploads/2022/05/DJI_0491-copy-1.png  ", experience_city:"3", experience_category:"4"})
+
+await createExperiences({experience_name:"Vizcaya Museum & Gardens", experience_description:"Step back into the Gilded Age at this stunning waterfront mansion with lush European-style gardens. Vizcaya’s architecture and decor transport visitors to another era of luxury.", experience_picture:"https://vizcaya.org/wp-content/uploads/2024/08/vizcaya-video-home-1-copy-1400x747.jpg ", experience_city:"3", experience_category:"4"})
+
+await createExperiences({experience_name:"Little Havana (Calle Ocho)", experience_description:"This bustling neighborhood is alive with Latin music, colorful murals, and the aroma of fresh Cuban coffee. Walking Calle Ocho lets you immerse yourself in Miami’s Cuban heritage.", experience_picture:"https://upload.wikimedia.org/wikipedia/commons/2/25/Villa_Vizcaya_20110228.jpg  ", experience_city:"3", experience_category:"4"})
 
 
-// seed cities - Vegas 
+// seed Experiences - Vegas - Eat (category 1) 
 
+await createExperiences({experience_name:"é by José Andrés", experience_description:"An exclusive, intimate dining experience tucked inside Jaleo, offering avant-garde tasting menus inspired by Spanish cuisine. Each multi-course meal is a theatrical culinary performance.", experience_picture:"https://www.ebyjoseandres.com/images/2022/e-08.jpg  ", experience_city:"4", experience_category:"1"})
 
+await createExperiences({experience_name:"Lotus of Siam", experience_description:"Widely recognized as one of the best Thai restaurants in the U.S., Lotus of Siam serves Northern Thai specialties bursting with authentic flavors. Dishes like crispy garlic prawns and khao soi are must-tries.", experience_picture:"https://assets.simpleviewcms.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://lasvegas.simpleviewcrm.com/images/listings/original_Lotus-Entry_971443D9-060B-0B33-5EEADBEB252ADC4C-97143e30afce270.jpg  ", experience_city:"4", experience_category:"1"})
 
+await createExperiences({experience_name:"Gordon Ramsay Hell’s Kitchen", experience_description:"Inspired by the hit TV show, Hell’s Kitchen offers modern takes on Ramsay’s signature dishes like Beef Wellington in a sleek, fiery setting. Guests can enjoy dinner with views of the Strip.", experience_picture:"https://usmenuguide.com/wp-content/uploads/2021/02/hellskitchenlasvegas2.jpg ", experience_city:"4", experience_category:"1"})
+
+// seed Experiences - Vegas - Drinks (category 2) 
+
+await createExperiences({experience_name:"SkyBar at Waldorf Astoria", experience_description:"Soaring high above the Strip, SkyBar offers handcrafted cocktails and breathtaking sunset views. Their happy hour includes creative drinks and small plates in a chic setting.", experience_picture:"https://resizer.otstatic.com/v3/photos/26042618-1?width=1280&height=720&webp=true ", experience_city:"4", experience_category:"2"})
+
+await createExperiences({experience_name:"Therapy", experience_description:"Located in Downtown Vegas, Therapy is a stylish lounge known for playful cocktails and innovative American bites. Their happy hour is perfect before exploring Fremont Street.", experience_picture:"https://assets.simpleviewcms.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://lasvegas.simpleviewcrm.com/images/listings/original_therapy_FC79BAAE-CC40-2399-FEF1A4B44721FB00-fc79b9cb00fbae3.jpg  ", experience_city:"4", experience_category:"2"})
+
+await createExperiences({experience_name:"Yardbird Southern Table & Bar", experience_description:"This award-winning restaurant celebrates Southern comfort with bourbon cocktails and fried chicken. Their happy hour features classic drinks and tasty small plates with a southern twist.", experience_picture:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/2d/1f/0f/yardbird-las-vegas.jpg?w=900&h=500&s=1  ", experience_city:"4", experience_category:"2"})
+
+// seed Experiences - Vegas - Play (category 3) 
+
+await createExperiences({experience_name:"Cirque du Soleil Shows", experience_description:"Vegas is home to stunning Cirque du Soleil productions like “O” and “Mystère,” which combine acrobatics, storytelling, and breathtaking visuals. A quintessential Vegas night out.", experience_picture:"https://images.squarespace-cdn.com/content/v1/5e0e65adcd39ed279a0402fd/68e2712a-75d4-4a59-bbdb-bf2c70a6d487/21_Finale_5270.jpeg ", experience_city:"4", experience_category:"3"})
+
+await createExperiences({experience_name:"Absinthe at Caesars Palace", experience_description:"A raucous adults-only variety show combining burlesque, circus acts, and outrageous comedy in an intimate spiegeltent. It’s wild, irreverent, and uniquely Vegas.", experience_picture:"https://spiegelworld.com/wp-content/uploads/2023/06/Absinthe-theater-web.jpg ", experience_city:"4", experience_category:"3"})
+
+await createExperiences({experience_name:"Fremont Street Experience", experience_description:"Covered by the world’s largest LED canopy, Fremont Street hosts dazzling light shows and live music stages. It’s the vibrant, retro heart of Downtown Las Vegas.", experience_picture:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/db/6f/80/see-the-world-s-biggest.jpg?w=1200&h=1200&s=1 ", experience_city:"4", experience_category:"3"})
+
+// seed Experiences - Vegas - Explore (category 4) 
+
+await createExperiences({experience_name:"Grand Canyon Helicopter Tour", experience_description:"Departing from Vegas, helicopter tours offer jaw-dropping views of the Grand Canyon, Hoover Dam, and Lake Mead. Many tours include champagne landings at the canyon floor.", experience_picture:"https://www.canyontours.com/wp-content/uploads/2024/09/Grand-Canyon-Exclusive-Floor-Landing-Helicopter-Tour-03.jpg  ", experience_city:"4", experience_category:"4"})
+
+await createExperiences({experience_name:"Mojave Desert ATV Tours", experience_description:"Ride across rugged desert trails on guided ATV adventures through sand dunes and arid landscapes. A thrilling way to experience the raw beauty of Nevada’s desert.", experience_picture:"https://bestatvtourslv.com/wp-content/uploads/2022/03/IMG_ATV_8.jpg", experience_city:"4", experience_category:"4"})
+
+await createExperiences({experience_name:"Valley of Fire State Park", experience_description:" Nevada’s oldest state park is famous for fiery red sandstone formations, petroglyphs, and sweeping vistas. Short hikes offer incredible photo opportunities.", experience_picture:"https://travelnevada.com/wp-content/uploads/2020/04/lass-id-original-1517256395-5a6f7ecb0efe5-768x432.jpg", experience_city:"4", experience_category:"4"})
 
 }
 
