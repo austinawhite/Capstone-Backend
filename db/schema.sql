@@ -37,6 +37,7 @@ CREATE TABLE experiences (
 
 CREATE TABLE trips(
     id SERIAL PRIMARY KEY,
+    trip_name TEXT NOT NULL,
     trip_date DATE NOT NULL,
     end_date DATE NOT NULL,
     user_id INTEGER NOT NULL, 
