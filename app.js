@@ -5,6 +5,8 @@ import citiesRouter from "./api/cities.js";
 import categoriesRouter from "./api/categories.js";
 import experiencesRouter from "./api/experiences.js";
 import usersRouter from "./api/users.js";
+import tripsRouter from "./api/trips.js"; 
+
 
 const app = express();
 
@@ -15,6 +17,7 @@ app.use("/cities", citiesRouter);
 app.use("/categories", categoriesRouter);
 app.use("/experiences", experiencesRouter);
 app.use("/users", usersRouter);
+app.use('/trips', tripsRouter);
 
 app.use((err, req, res, next)=>{
     console.error(err);
