@@ -52,7 +52,7 @@ CREATE TABLE trip_experiences(
     trip_id INTEGER NOT NULL,
     trip_experience INTEGER NOT NULL, 
     experience_date DATE NOT NULL,
-    FOREIN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE,
+    FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE,
     FOREIGN KEY (trip_experience) REFERENCES experiences(id) ON DELETE CASCADE
 );
 
