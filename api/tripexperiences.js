@@ -1,9 +1,10 @@
-import { verifyToken } from "../middleware";
+import { verifyToken } from "../middleware.js";
 import express from "express";
-import db from "../db/client";
+import db from "../db/client.js";
 const router = express.Router();
+
 //POST /tripexperiences (Add experience to trip)
-router.post('/api/tripexperiences', verifyToken, async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
     console.log("Received request to add experience");
     try {
         const { trip_id, experience_id, experience_date } = req.body;

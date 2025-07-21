@@ -7,7 +7,7 @@ import experiencesRouter from "./api/experiences.js";
 import usersRouter from "./api/users.js";
 import tripsRouter from "./api/trips.js"; 
 import reviewRoutes from "./api/reviews.js";
-// import router from "#api/tripexperiences";
+import router from "./api/tripexperiences.js";
 
 
 
@@ -22,7 +22,7 @@ app.use("/experiences", experiencesRouter);
 app.use("/users", usersRouter);
 app.use('/trips', tripsRouter);
 app.use("/api/reviews", reviewRoutes);
-// app.use("/api/tripexperiences",router);
+app.use("/api/tripexperiences",router);
 
 app.use((err, req, res, next)=>{
     console.error(err);
